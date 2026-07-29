@@ -1,0 +1,70 @@
+<!-- @dsCard group="Social" viewport="1180x760" name="NGN Social — quote cards" subtitle="Instagram story + carousel quote templates" -->
+<!-- @startingPoint section="Social" subtitle="NGN social quote templates" viewport="1180x760" -->
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NGN Social templates</title>
+<link rel="stylesheet" href="../../styles.css">
+<style>*{box-sizing:border-box}body{margin:0;background:var(--surface-sunken);font-family:var(--font-body)}
+a{color:var(--accent-text)}a:hover{color:var(--accent-press)}
+.wrap{max-width:1140px;margin:0 auto;padding:40px 24px 64px}
+.head{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+.head img{height:22px}
+.head h1{font-family:var(--font-display);font-weight:400;font-size:24px;letter-spacing:0;margin:0}
+.sub{font-family:var(--font-body);color:var(--text-muted);font-size:14px;margin:0 0 30px}
+.rule{border:none;border-top:3px solid var(--ngn-black);margin:0 0 22px}
+.lbl{font-family:var(--font-body);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--ngn-red);margin:0 0 16px}
+.grid{display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;margin-bottom:44px}
+.story{width:300px}
+.sq{width:300px}
+.frame{box-shadow:var(--shadow-lg);border-radius:var(--radius-sm);overflow:hidden}
+.cap{font-family:var(--font-mono);font-size:11px;color:var(--text-muted);margin-top:10px}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script></head>
+<body><div id="root"></div>
+<script type="text/babel">
+const { QuoteCard } = window.NortheasternGlobalNewsDesignSystem_712acf;
+const B = "../../assets";
+function App(){
+  return (<div className="wrap">
+    <div className="head"><img src={B+"/wordmark-horizontal-on-light.svg"} alt="NGN"/><h1>Social templates</h1></div>
+    <p className="sub">On-brand quote cards built from the QuoteCard component and the arrow watermark.</p>
+
+    <hr className="rule"/>
+    <p className="lbl">Instagram story · 9:16</p>
+    <div className="grid">
+      <div className="story"><div className="frame">
+        <QuoteCard tone="dark" format="story" assetBase={B}
+          quote="Because we've been doing this coordination with the city and university for so long, we've got it down. We know what to expect."
+          name="Mallory Pernaa" role="director of off-campus engagement and support at Northeastern" />
+      </div><div className="cap">tone="dark" · format="story"</div></div>
+      <div className="story"><div className="frame">
+        <QuoteCard tone="cream" format="story" assetBase={B}
+          quote="We went looking for one answer and came back with a hundred new questions."
+          name="Dr. Maya Fernandes" role="marine sciences, Northeastern University" />
+      </div><div className="cap">tone="cream" · format="story"</div></div>
+    </div>
+
+    <hr className="rule"/>
+    <p className="lbl">Carousel · square 1:1</p>
+    <div className="grid">
+      <div className="sq"><div className="frame">
+        <QuoteCard tone="cream" format="square" assetBase={B} showMark={true}
+          quote="Competing in his ninth Boston Marathon, Joe Finn stopped running and sprang into action."
+          name="" role="" />
+      </div><div className="cap">Slide 1 · lead</div></div>
+      <div className="sq"><div className="frame">
+        <QuoteCard tone="cream" format="square" assetBase={B} showMark={false}
+          quote="They were all coming together as a group. They kept their composure and battled the whole time."
+          name="Dave Flint" role="head women's hockey coach at Northeastern" />
+      </div><div className="cap">Slide 2 · quote</div></div>
+      <div className="sq"><div className="frame">
+        <QuoteCard tone="dark" format="square" assetBase={B} showMark={true}
+          quote="Link in bio for the full story."
+          name="" role="news.northeastern.edu" />
+      </div><div className="cap">Slide 3 · CTA</div></div>
+    </div>
+  </div>);
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script></body></html>
