@@ -1,0 +1,40 @@
+<!-- @dsCard group="Components" viewport="700x300" name="Buttons, Tags & Kicker" subtitle="Core actions and labels" -->
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>body{margin:0;font-family:var(--font-body);background:#fff;padding:26px}
+.grp{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:20px}
+.lbl{font-family:var(--font-mono);font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.1em;width:100%;margin-bottom:2px}
+.dark{background:#000;padding:14px;border-radius:6px}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script></head>
+<body><div id="root"></div>
+<script type="text/babel">
+const { Button, Tag, Kicker } = window.NortheasternGlobalNewsDesignSystem_712acf;
+function Demo(){
+  return (<div>
+    <div class="grp"><span class="lbl">Buttons</span>
+      <Button variant="primary" arrow>Read the story</Button>
+      <Button variant="secondary">Subscribe</Button>
+      <Button variant="ghost">Share</Button>
+      <Button variant="link" arrow>More news</Button>
+      <Button variant="primary" disabled>Disabled</Button>
+    </div>
+    <div class="grp"><span class="lbl">Sizes</span>
+      <Button size="sm" variant="primary">Small</Button>
+      <Button size="md" variant="primary">Medium</Button>
+      <Button size="lg" variant="primary" arrow>Large</Button>
+      <div class="dark"><Button variant="inverse" arrow>On dark</Button></div>
+    </div>
+    <div class="grp"><span class="lbl">Tags</span>
+      <Tag>Research</Tag><Tag tone="solid">Campus</Tag><Tag tone="tint">Health</Tag>
+      <Tag tone="outline">Opinion</Tag><Tag tone="gold">Award</Tag>
+    </div>
+    <div class="grp"><span class="lbl">Kicker</span>
+      <Kicker>In the news</Kicker>
+    </div>
+  </div>);
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

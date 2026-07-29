@@ -1,0 +1,11 @@
+/* Arrow-pattern watermark — the staggered northeast-arrow tile used as a faint
+ * background texture on quote cards, stories and section headers.
+ * The tiles live in /assets; reference them relative to the CONSUMING file, or
+ * use the inline data helper in the Pattern component. These custom props hold
+ * the canonical tile paths (relative to project root). */
+:root {
+  --pattern-tile-black: url('assets/arrow-tile-black.png'); /* @kind other */
+  --pattern-tile-red:   url('assets/arrow-tile-red.png'); /* @kind other */
+  --pattern-tile-white: url('assets/arrow-tile-white.png'); /* @kind other */
+  --pattern-tile-size: 300px; /* @kind spacing */
+}

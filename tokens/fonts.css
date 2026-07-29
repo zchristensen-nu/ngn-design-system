@@ -1,0 +1,12 @@
+/* Northeastern Global News — Webfonts
+ * Brand primary type is Real Head Pro (FF Real, Adobe Fonts — licensed).
+ * SUBSTITUTION: Real Head Pro is not open-licensed, so the display face here is
+ * Hanken Grotesk (Google Fonts) — the closest free geometric-humanist grotesque
+ * to FF Real's proportions and heavy display weights (matches the NGN logo).
+ * Body/alternate type is Lato, which is the brand's OWN alternate face (exact).
+ * Swap in real FF Real webfonts for production. */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,400..800&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&display=swap');
+/* SUBSTITUTION 2: the editorial DISPLAY SERIF used for pull quotes on social
+ * cards and stories is a licensed Scotch/Miller-style face; substituted here with
+ * Newsreader (Google Fonts) — a high-contrast news serif with ball terminals that
+ * matches the quote treatment. Swap for the real serif in production. */

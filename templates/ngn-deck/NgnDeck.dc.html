@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="NGN Presentation Deck" description="Northeastern Global News branded 16:9 deck — 16 slide types: title, agenda, section dividers, statements, quotes, content, stats, imagery, people, timeline, closing." -->
+<helmet>
+<script src="./ds-base.js"></script>
+<style>
+  html,body{margin:0;padding:0;background:#111;font-family:"Lato",system-ui,sans-serif}
+  *{box-sizing:border-box}
+</style>
+</helmet>
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
+
+  <!-- 1 · TITLE -->
+  <section data-label="Title" style="width:1920px;height:1080px;position:relative;overflow:hidden;background:#000;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:120px 130px">
+    <div style="position:absolute;top:0;right:0;bottom:0;width:640px;background-position:right top;background-image:url('../../assets/arrow-tile-black.png');background-repeat:no-repeat;background-size:auto 100%;pointer-events:none"></div>
+    <img src="../../assets/wordmark-horizontal-on-dark.svg" alt="NGN" style="position:absolute;top:110px;left:130px;height:54px">
+    <div style="position:relative">
+      <h1 style="font-family:'Kepler Std',Georgia,serif;font-weight:300;font-size:150px;line-height:0.98;letter-spacing:-0.02em;margin:0;max-width:1500px">The year in Northeastern research</h1>
+      <p style="font-family:'Lato';font-size:34px;color:#c7c7c2;margin:44px 0 0;max-width:1050px;line-height:1.5">A look at the stories, discoveries and voices that defined our global newsroom.</p>
+    </div>
+  </section>
+
+  <!-- 2 · AGENDA -->
+  <section data-label="Agenda" style="width:1920px;height:1080px;position:relative;background:var(--surface-page);color:var(--text-primary);display:grid;grid-template-columns:1fr 1fr;gap:90px;padding:130px">
+    <div>
+      <h2 style="font-family:'Kepler Std',Georgia,serif;font-weight:300;font-size:104px;line-height:1.0;letter-spacing:-0.02em;margin:0">Agenda</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;justify-content:center;gap:0">
+      <div style="display:flex;gap:34px;align-items:baseline;padding:30px 0;border-top:2px solid var(--ngn-black)"><span style="font-family:'Kepler Std',serif;font-size:34px;color:var(--ngn-red);width:60px">01</span><span style="font-family:'Kepler Std',serif;font-weight:300;font-size:44px">The stories that mattered</span></div>
+      <div style="display:flex;gap:34px;align-items:baseline;padding:30px 0;border-top:1px solid var(--border-default)"><span style="font-family:'Kepler Std',serif;font-size:34px;color:var(--ngn-red);width:60px">02</span><span style="font-family:'Kepler Std',serif;font-weight:300;font-size:44px">Research & discovery</span></div>
+      <div style="display:flex;gap:34px;align-items:baseline;padding:30px 0;border-top:1px solid var(--border-default)"><span style="font-family:'Kepler Std',serif;font-size:34px;color:var(--ngn-red);width:60px">03</span><span style="font-family:'Kepler Std',serif;font-weight:300;font-size:44px">Reach & readership</span></div>
+      <div style="display:flex;gap:34px;align-items:baseline;padding:30px 0;border-top:1px solid var(--border-default)"><span style="font-family:'Kepler Std',serif;font-size:34px;color:var(--ngn-red);width:60px">04</span><span style="font-family:'Kepler Std',serif;font-weight:300;font-size:44px">What's next</span></div>
+    </div>
+  </section>
+
+  <!-- 3 · SECTION DIVIDER -->
+  <section data-label="Section" style="width:1920px;height:1080px;position:relative;overflow:hidden;background:var(--ngn-red);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:130px">
+    <div style="position:absolute;top:0;right:0;bottom:0;width:640px;background-position:right top;background-image:url('../../assets/arrow-tile-red.png');background-repeat:no-repeat;background-size:auto 100%;pointer-events:none"></div>
+    <div style="position:relative">
+      <div style="font-family:'Lato';font-size:40px;font-weight:700;opacity:0.7;margin-bottom:20px">01</div>
+      <h2 style="font-family:'Kepler Std',Georgia,serif;font-weight:300;font-size:150px;line-height:0.98;letter-spacing:-0.02em;margin:0;max-width:1400px">The stories that mattered</h2>
+    </div>
+  </section>
+
+  <!-- 4 · BIG STATEMENT -->
+  <section data-label="Statement" style="width:1920px;height:1080px;position:relative;background:var(--surface-page);color:var(--text-primary);display:flex;align-items:center;padding:130px">
+    <h2 style="font-family:'Kepler Std',Georgia,serif;font-weight:300;font-size:118px;line-height:1.06;letter-spacing:-0.02em;margin:0;max-width:1500px">Experience-driven journalism, reported from a <em style="font-style:italic;color:var(--ngn-red)">global network</em> of campuses.</h2>
+  </section>
+
+  <!-- 5 · PULL QUOTE (dark) -->
+  <section data-label="Quote" style="width:1920px;height:1080px;position:relative;overflow:hidden;background:#000;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:130px">
+    <div style="position:absolute;top:0;right:0;bottom:0;width:640px;background-position:right top;background-image:url('../../assets/arrow-tile-black.png');background-repeat:no-repeat;background-size:auto 100%;pointer-events:none"></div>
+    <img src="../../assets/logo-monogram-stacked-on-dark.svg" alt="NGN" style="position:absolute;top:130px;left:130px;height:96px">
+    <blockquote style="position:relative;font-family:'Kepler Std',Georgia,serif;font-weight:300;font-size:88px;line-height:1.12;letter-spacing:-0.01em;margin:0;max-width:1560px">&ldquo;The world doesn&rsquo;t wait. Neither do we.&rdquo;</blockquote>
+    <p style="position:relative;font-family:'Lato';font-size:32px;margin:44px 0 0;color:#c7c7c2"><b style="color:#fff">Joseph E. Aoun</b>, President, Northeastern University</p>
+  </section>
+
+  <!-- 6 · CONTENT: headline + lead -->
+  <section data-label="Content" style="width:1920px;height:1080px;position:relative;background:var(--surface-page);color:var(--text-primary);display:flex;flex-direction:column;justify-content:center;padding:130px">
+    <h2 style="font-family:'Kepler Std',Georgia,serif;font-weight:300;font-size:92px;line-height:1.04;letter-spacing:-0.015em;margin:0 0 40px;max-width:1400px">Mapping an uncharted stretch of the deep-sea floor</h2>
+    <p style="font-family:'Lato';font-size:38px;line-height:1.55;color:var(--text-secondary);margin:0;max-width:1250px">A monthslong expedition off the Atlantic ridge returned with troves of data that could reshape how we understand ocean carbon — much of it processed by co-op students in real time.</p>
+  </section>
+
+  <!-- 7 · BULLETED LIST -->
+  <section data-label="List" style="width:1920px;height:1080px;position:relative;background:var(--surface-page);color:var(--text-primary);display:grid;grid-template-columns:1fr 1.25fr;gap:90px;padding:130px;align-items:center">
+    <div>
+      <h2 style="font-family:'Kepler Std',Georgia,serif;font-weight:300;font-size:88px;line-height:1.02;letter-spacing:-0.02em;margin:0">Four things to know</h2>
+    </div>
+    <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0">
+      <li style="display:flex;gap:28px;padding:32px 0;border-top:1px solid var(--border-default);font-family:'Lato';font-size:36px;line-height:1.4"><img src="../../assets/arrow-red.png" style="width:34px;height:34px;margin-top:8px;flex:none">Readership grew across every global campus region.</li>
+      <li style="display:flex;gap:28px;padding:32px 0;border-top:1px solid var(--border-default);font-family:'Lato';font-size:36px;line-height:1.4"><img src="../../assets/arrow-red.png" style="width:34px;height:34px;margin-top:8px;flex:none">Research coverage drove the year&rsquo;s top ten stories.</li>
+      <li style="display:flex;gap:28px;padding:32px 0;border-top:1px solid var(--border-default);font-family:'Lato';font-size:36px;line-height:1.4"><img src="../../assets/arrow-red.png" style="width:34px;height:34px;margin-top:8px;flex:none">Video and social formats doubled their audience.</li>
+      <li style="display:flex;gap:28px;padding:32px 0;border-top:1px solid var(--border-default);font-family:'Lato';font-size:36px;line-height:1.4"><img src="../../assets/arrow-red.png" style="width:34px;height:34px;margin-top:8px;flex:none">The newsletter passed 100,000 weekly subscribers.</li>
+    </ul>
+  </section>
+
+  <!-- 8 · TWO-COLUMN COMPARISON -->
+  <section data-label="Compare" style="width:1920px;height:1080px;position:relative;background:var(--surface-page);color:var(--text-primary);padding:130px;display:flex;flex-direction:column">
+    <h2 style="font-family:'Kepler Std',Georgia,serif;font-weight:300;font-size:84px;line-height:1.0;letter-spacing:-0.02em;margin:0 0 64px">Then and now</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;flex:1">
+      <div style="background:var(--surface-paper);border-top:5px solid var(--neutral-400);padding:56px">
+        <div style="text-transform:uppercase;letter-spacing:0.1em;font-weight:700;font-size:24px;color:var(--text-muted);margin-bottom:30px">2020</div>
+        <p style="font-family:'Lato';font-size:34px;line-height:1.5;margin:0;color:var(--text-secondary)">A campus news site reporting primarily to a Boston audience.</p>
+      </div>
+      <div style="background:#000;color:#fff;border-top:5px solid var(--ngn-red);padding:56px">
+        <div style="text-transform:uppercase;letter-spacing:0.1em;font-weight:700;font-size:24px;color:var(--ngn-red);margin-bottom:30px">2026</div>
+        <p style="font-family:'Lato';font-size:34px;line-height:1.5;margin:0;color:#e0e0dc">A global newsroom publishing research, health and world coverage across thirteen campuses.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 · SINGLE BIG STAT -->
+  <section data-label="Stat" style="width:1920px;height:1080px;position:relative;overflow:hidden;background:#000;color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:130px">
+    <div style="position:absolute;top:0;right:0;bottom:0;width:640px;background-position:right top;background-image:url('../../assets/arrow-tile-black.png');background-repeat:no-repeat;background-size:auto 100%;pointer-events:none"></div>
+    <div style="position:relative;font-family:'Kepler Std',Georgia,serif;font-weight:300;font-size:340px;line-height:0.9;letter-spacing:-0.03em;color:var(--ngn-red)">2.4M</div>
+    <p style="position:relative;font-family:'Lato';font-size:40px;color:#c7c7c2;margin:30px 0 0;max-width:1100px">monthly readers across Northeastern Global News</p>
+  </section>
+
+  <!-- 10 · STATS GRID (3-up) -->
+  <section data-label="Metrics" style="width:1920px;height:1080px;position:relative;background:var(--surface-page);color:var(--text-primary);padding:130px;display:flex;flex-direction:column;justify-content:center">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:70px">
+      <div style="border-top:5px solid var(--ngn-black);padding-top:38px"><div style="font-family:'Kepler Std',serif;font-weight:300;font-size:150px;line-height:0.9;letter-spacing:-0.02em">1,900</div><p style="font-family:'Lato';font-size:32px;color:var(--text-secondary);margin:22px 0 0;line-height:1.4">stories published this year</p></div>
+      <div style="border-top:5px solid var(--ngn-black);padding-top:38px"><div style="font-family:'Kepler Std',serif;font-weight:300;font-size:150px;line-height:0.9;letter-spacing:-0.02em">13</div><p style="font-family:'Lato';font-size:32px;color:var(--text-secondary);margin:22px 0 0;line-height:1.4">global campuses covered</p></div>
+      <div style="border-top:5px solid var(--ngn-red);padding-top:38px"><div style="font-family:'Kepler Std',serif;font-weight:300;font-size:150px;line-height:0.9;letter-spacing:-0.02em;color:var(--ngn-red)">100K</div><p style="font-family:'Lato';font-size:32px;color:var(--text-secondary);margin:22px 0 0;line-height:1.4">weekly newsletter subscribers</p></div>
+    </div>
+  </section>
+
+  <!-- 11 · FULL-BLEED IMAGE + OVERLAY -->
+  <section data-label="Image full" style="width:1920px;height:1080px;position:relative;overflow:hidden;background:#000;color:#fff;display:flex;flex-direction:column;justify-content:flex-end">
+    <img src="https://picsum.photos/seed/ngndeck1/1920/1080" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.1) 55%,transparent 100%)"></div>
+    <div style="position:relative;padding:120px 130px">
+      <div style="display:inline-block;background:var(--ngn-red);color:#fff;font-family:'Lato';font-weight:900;text-transform:uppercase;letter-spacing:0.1em;font-size:22px;padding:8px 16px;margin-bottom:26px">Field report</div>
+      <h2 style="font-family:'Kepler Std',Georgia,serif;font-weight:300;font-size:88px;line-height:1.05;letter-spacing:-0.01em;margin:0;max-width:1400px">On the water with the deep-sea expedition team</h2>
+    </div>
+  </section>
+
+  <!-- 12 · IMAGE + TEXT SPLIT -->
+  <section data-label="Image split" style="width:1920px;height:1080px;position:relative;background:var(--surface-page);color:var(--text-primary);display:grid;grid-template-columns:1fr 1fr">
+    <div style="display:flex;flex-direction:column;justify-content:center;padding:130px">
+      <h2 style="font-family:'Kepler Std',Georgia,serif;font-weight:300;font-size:78px;line-height:1.04;letter-spacing:-0.015em;margin:0 0 36px">A new home for experiential learning</h2>
+      <p style="font-family:'Lato';font-size:34px;line-height:1.55;color:var(--text-secondary);margin:0">The twelve-story hub brings studios, labs and maker space together under one roof in Boston.</p>
+    </div>
+    <div style="position:relative;background:var(--neutral-200)"><img src="https://picsum.photos/seed/ngndeck2/1100/1080" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>
+  </section>
+
+  <!-- 13 · PEOPLE / TEAM GRID -->
+  <section data-label="People" style="width:1920px;height:1080px;position:relative;background:var(--surface-page);color:var(--text-primary);padding:130px;display:flex;flex-direction:column;justify-content:center">
+    <h2 style="font-family:'Kepler Std',Georgia,serif;font-weight:300;font-size:84px;line-height:1.0;letter-spacing:-0.02em;margin:0 0 64px">The newsroom</h2>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:56px">
+      <div><div style="aspect-ratio:1;background:var(--neutral-200);overflow:hidden;margin-bottom:24px"><img src="https://picsum.photos/seed/ngnp1/500/500" style="width:100%;height:100%;object-fit:cover"></div><div style="font-family:'Kepler Std',serif;font-weight:300;font-size:34px">Ian Thomsen</div><div style="font-family:'Lato';font-size:26px;color:var(--text-muted);margin-top:6px">Senior writer</div></div>
+      <div><div style="aspect-ratio:1;background:var(--neutral-200);overflow:hidden;margin-bottom:24px"><img src="https://picsum.photos/seed/ngnp2/500/500" style="width:100%;height:100%;object-fit:cover"></div><div style="font-family:'Kepler Std',serif;font-weight:300;font-size:34px">C. McCormick</div><div style="font-family:'Lato';font-size:26px;color:var(--text-muted);margin-top:6px">Health & campus</div></div>
+      <div><div style="aspect-ratio:1;background:var(--neutral-200);overflow:hidden;margin-bottom:24px"><img src="https://picsum.photos/seed/ngnp3/500/500" style="width:100%;height:100%;object-fit:cover"></div><div style="font-family:'Kepler Std',serif;font-weight:300;font-size:34px">Tanner Stening</div><div style="font-family:'Lato';font-size:26px;color:var(--text-muted);margin-top:6px">Global desk</div></div>
+      <div><div style="aspect-ratio:1;background:var(--neutral-200);overflow:hidden;margin-bottom:24px"><img src="https://picsum.photos/seed/ngnp4/500/500" style="width:100%;height:100%;object-fit:cover"></div><div style="font-family:'Kepler Std',serif;font-weight:300;font-size:34px">Alena Kuzub</div><div style="font-family:'Lato';font-size:26px;color:var(--text-muted);margin-top:6px">Research desk</div></div>
+    </div>
+  </section>
+
+  <!-- 14 · TIMELINE -->
+  <section data-label="Timeline" style="width:1920px;height:1080px;position:relative;background:var(--surface-page);color:var(--text-primary);padding:130px;display:flex;flex-direction:column;justify-content:center">
+    <h2 style="font-family:'Kepler Std',Georgia,serif;font-weight:300;font-size:84px;line-height:1.0;letter-spacing:-0.02em;margin:0 0 76px">The road ahead</h2>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:3px solid var(--ngn-black)">
+      <div style="padding:44px 40px 0 0;position:relative"><div style="position:absolute;top:-14px;left:0;width:24px;height:24px;background:var(--ngn-red)"></div><div style="font-family:'Kepler Std',serif;font-size:40px;color:var(--ngn-red);margin-bottom:18px">Q2</div><p style="font-family:'Lato';font-size:30px;line-height:1.45;margin:0;color:var(--text-secondary)">Launch the redesigned research vertical.</p></div>
+      <div style="padding:44px 40px 0;position:relative;border-left:1px solid var(--border-default)"><div style="position:absolute;top:-14px;left:40px;width:24px;height:24px;background:var(--ngn-black)"></div><div style="font-family:'Kepler Std',serif;font-size:40px;color:var(--ngn-red);margin-bottom:18px">Q3</div><p style="font-family:'Lato';font-size:30px;line-height:1.45;margin:0;color:var(--text-secondary)">Expand the daily video franchise.</p></div>
+      <div style="padding:44px 40px 0;position:relative;border-left:1px solid var(--border-default)"><div style="position:absolute;top:-14px;left:40px;width:24px;height:24px;background:var(--ngn-black)"></div><div style="font-family:'Kepler Std',serif;font-size:40px;color:var(--ngn-red);margin-bottom:18px">Q4</div><p style="font-family:'Lato';font-size:30px;line-height:1.45;margin:0;color:var(--text-secondary)">Open coverage from two new campuses.</p></div>
+      <div style="padding:44px 0 0 40px;position:relative;border-left:1px solid var(--border-default)"><div style="position:absolute;top:-14px;left:40px;width:24px;height:24px;background:var(--ngn-black)"></div><div style="font-family:'Kepler Std',serif;font-size:40px;color:var(--ngn-red);margin-bottom:18px">2027</div><p style="font-family:'Lato';font-size:30px;line-height:1.45;margin:0;color:var(--text-secondary)">Reach three million monthly readers.</p></div>
+    </div>
+  </section>
+
+  <!-- 15 · QUOTE CARD (cream) -->
+  <section data-label="Quote cream" style="width:1920px;height:1080px;position:relative;overflow:hidden;background:var(--surface-cream);color:var(--text-primary);display:flex;flex-direction:column;justify-content:flex-end;padding:130px">
+    <div style="position:absolute;top:0;right:0;bottom:0;width:640px;background-position:right top;background-image:url('../../assets/arrow-tile-black.png');background-repeat:no-repeat;background-size:auto 100%;opacity:0.06;pointer-events:none"></div>
+    <blockquote style="position:relative;font-family:'Kepler Std',Georgia,serif;font-weight:300;font-size:82px;line-height:1.14;letter-spacing:-0.01em;margin:0;max-width:1560px">&ldquo;We went looking for one answer and came back with a hundred new questions.&rdquo;</blockquote>
+    <p style="position:relative;font-family:'Lato';font-size:32px;margin:42px 0 0;color:var(--text-secondary)"><b style="color:var(--text-primary)">Dr. Maya Fernandes</b>, Marine Sciences, Northeastern University</p>
+  </section>
+
+  <!-- 16 · CLOSING / CTA -->
+  <section data-label="Closing" style="width:1920px;height:1080px;position:relative;overflow:hidden;background:#000;color:#fff;display:flex;flex-direction:column;justify-content:center;padding:130px">
+    <div style="position:absolute;top:0;right:0;bottom:0;width:640px;background-position:right top;background-image:url('../../assets/arrow-tile-black.png');background-repeat:no-repeat;background-size:auto 100%;pointer-events:none"></div>
+    <div style="position:relative">
+      <h2 style="font-family:'Kepler Std',Georgia,serif;font-weight:300;font-size:130px;line-height:0.98;letter-spacing:-0.02em;margin:0 0 40px">Thank you</h2>
+      <p style="font-family:'Lato';font-size:38px;color:#c7c7c2;margin:0 0 60px">Read the full story <b style="color:#fff">news.northeastern.edu</b></p>
+      <img src="../../assets/wordmark-horizontal-on-dark.svg" alt="Northeastern Global News" style="height:54px">
+    </div>
+  </section>
+
+</x-import>
+</x-dc>
+</body>
+</html>

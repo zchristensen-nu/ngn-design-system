@@ -1,0 +1,72 @@
+/* Colors — Northeastern brand core + editorial neutrals
+ * Brand core (per brand.northeastern.edu/color): Black, White, Red 186U, Gold 871.
+ * Red is an ACCENT: <25% of any design. Gold is reserved/prestige: ~5%. */
+:root {
+  /* ---- Brand core ---- */
+  --ngn-black: #000000;
+  --ngn-white: #ffffff;
+  --ngn-red: #c8102e;   /* PMS 186 U — the signature "northeast" red */
+  --ngn-gold: #a4804a;  /* PMS 871 metallic — prestige, reserved use */
+
+  /* ---- Red ramp (states + tints) ---- */
+  --red-100: #fbe7ea;
+  --red-200: #f2b8c1;
+  --red-500: #c8102e;
+  --red-600: #a80c26;   /* hover */
+  --red-700: #85091e;   /* pressed */
+
+  /* ---- Gold ramp ---- */
+  --gold-100: #f4ecdd;
+  --gold-500: #a4804a;
+  --gold-600: #8a6a3a;
+
+  /* ---- Neutral ramp (warm-cool balanced, anchored to true black) ---- */
+  --neutral-0:   #ffffff;
+  --neutral-50:  #f7f7f5;  /* newsprint paper */
+  --neutral-100: #efefec;
+  --neutral-200: #e0e0dc;
+  --neutral-300: #c7c7c2;
+  --neutral-400: #9c9c96;
+  --neutral-500: #6f6f69;
+  --neutral-600: #4c4c48;
+  --neutral-700: #333330;
+  --neutral-800: #1b1b1a;
+  --neutral-900: #0c0c0c;
+  --ngn-ink:     #000000;
+
+  /* ---- Semantic aliases ---- */
+  --surface-page:     var(--neutral-0);
+  --surface-paper:    var(--neutral-50);
+  --surface-card:     var(--neutral-0);
+  --surface-sunken:   var(--neutral-100);
+  --surface-inverse:  var(--ngn-black);
+  --surface-inverse-2:var(--neutral-800);
+  --surface-cream:    #f6f1e7; /* warm ivory — social quote cards */
+
+  --text-primary:   var(--ngn-black);
+  --text-secondary: var(--neutral-600);
+  --text-muted:     var(--neutral-500);
+  --text-inverse:   var(--ngn-white);
+  --text-on-red:    var(--ngn-white);
+
+  --accent:        var(--ngn-red);
+  --accent-hover:  var(--red-600);
+  --accent-press:  var(--red-700);
+  --accent-tint:   var(--red-100);
+  --accent-text:   var(--red-700); /* red text on white, AA-safe */
+
+  --prestige:      var(--ngn-gold);
+  --prestige-tint: var(--gold-100);
+
+  --border-subtle: var(--neutral-200);
+  --border-default:var(--neutral-300);
+  --border-strong: var(--ngn-black);
+  --divider-rule:  var(--ngn-black); /* editorial hairline rules are black */
+
+  --focus-ring:    var(--ngn-red);
+
+  /* status (functional UI only) */
+  --success: #1f7a3d;
+  --warning: #a4804a;
+  --danger:  #c8102e;
+}

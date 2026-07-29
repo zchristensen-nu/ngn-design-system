@@ -1,0 +1,425 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/brand/**",
+              "components/core/**",
+              "components/editorial/**",
+              "ui_kits/newsroom/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Hanken Grotesk|Lato|Newsreader))/i]",
+        "message": "Font not provided by the design system. Available: Hanken Grotesk, Lato, Newsreader."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ArrowPattern'] > JSXAttribute > JSXIdentifier[name!=/^(?:tone|opacity|size|assetBase|cover|key|ref|className|style|children)$/]",
+        "message": "<ArrowPattern> doesn't accept that prop. Declared props: tone, opacity, size, assetBase, cover."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ArrowPattern'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:black|red|white)$/]",
+        "message": "<ArrowPattern> tone must be one of 'black' | 'red' | 'white'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ArticleCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:image|category|categoryTone|title|dek|author|date|readTime|href|layout|size|key|ref|className|style|children)$/]",
+        "message": "<ArticleCard> doesn't accept that prop. Declared props: image, category, categoryTone, title, dek, author, date, readTime, href, layout, size."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ArticleCard'] > JSXAttribute[name.name='categoryTone'] > Literal[value!=/^(?:red|solid|tint|outline|gold)$/]",
+        "message": "<ArticleCard> categoryTone must be one of 'red' | 'solid' | 'tint' | 'outline' | 'gold'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ArticleCard'] > JSXAttribute[name.name='layout'] > Literal[value!=/^(?:stacked|horizontal)$/]",
+        "message": "<ArticleCard> layout must be one of 'stacked' | 'horizontal'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ArticleCard'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:sm|md|lg)$/]",
+        "message": "<ArticleCard> size must be one of 'sm' | 'md' | 'lg'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|variant|size|arrow|href|disabled|type|onClick|key|ref|className|style|children)$/]",
+        "message": "<Button> doesn't accept that prop. Declared props: children, variant, size, arrow, href, disabled, type, onClick."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:primary|secondary|inverse|ghost|link)$/]",
+        "message": "<Button> variant must be one of 'primary' | 'secondary' | 'inverse' | 'ghost' | 'link'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:sm|md|lg)$/]",
+        "message": "<Button> size must be one of 'sm' | 'md' | 'lg'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='type'] > Literal[value!=/^(?:button|submit|reset)$/]",
+        "message": "<Button> type must be one of 'button' | 'submit' | 'reset'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Byline'] > JSXAttribute > JSXIdentifier[name!=/^(?:author|date|readTime|size|key|ref|className|style|children)$/]",
+        "message": "<Byline> doesn't accept that prop. Declared props: author, date, readTime, size."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Byline'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:sm|md)$/]",
+        "message": "<Byline> size must be one of 'sm' | 'md'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Kicker'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|tone|key|ref|className|style|children)$/]",
+        "message": "<Kicker> doesn't accept that prop. Declared props: children, tone."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Kicker'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:red|muted)$/]",
+        "message": "<Kicker> tone must be one of 'red' | 'muted'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='NewsletterForm'] > JSXAttribute > JSXIdentifier[name!=/^(?:kicker|heading|blurb|tone|onSubmit|key|ref|className|style|children)$/]",
+        "message": "<NewsletterForm> doesn't accept that prop. Declared props: kicker, heading, blurb, tone, onSubmit."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='NewsletterForm'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:dark|light)$/]",
+        "message": "<NewsletterForm> tone must be one of 'dark' | 'light'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Pullquote'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|cite|role|align|key|ref|className|style|children)$/]",
+        "message": "<Pullquote> doesn't accept that prop. Declared props: children, cite, role, align."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Pullquote'] > JSXAttribute[name.name='align'] > Literal[value!=/^(?:left|center)$/]",
+        "message": "<Pullquote> align must be one of 'left' | 'center'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='QuoteCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:quote|name|role|tone|format|showMark|assetBase|key|ref|className|style|children)$/]",
+        "message": "<QuoteCard> doesn't accept that prop. Declared props: quote, name, role, tone, format, showMark, assetBase."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='QuoteCard'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:dark|cream)$/]",
+        "message": "<QuoteCard> tone must be one of 'dark' | 'cream'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='QuoteCard'] > JSXAttribute[name.name='format'] > Literal[value!=/^(?:story|square)$/]",
+        "message": "<QuoteCard> format must be one of 'story' | 'square'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Tag'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|tone|size|href|key|ref|className|style|children)$/]",
+        "message": "<Tag> doesn't accept that prop. Declared props: children, tone, size, href."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Tag'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:red|solid|tint|outline|gold)$/]",
+        "message": "<Tag> tone must be one of 'red' | 'solid' | 'tint' | 'outline' | 'gold'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Tag'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:sm|md)$/]",
+        "message": "<Tag> size must be one of 'sm' | 'md'."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "ArrowPattern": {
+        "replaces": []
+      },
+      "ArticleCard": {
+        "replaces": []
+      },
+      "Button": {
+        "replaces": []
+      },
+      "Byline": {
+        "replaces": []
+      },
+      "Kicker": {
+        "replaces": []
+      },
+      "NewsletterForm": {
+        "replaces": []
+      },
+      "Pullquote": {
+        "replaces": []
+      },
+      "QuoteCard": {
+        "replaces": []
+      },
+      "Tag": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--accent",
+      "--accent-hover",
+      "--accent-press",
+      "--accent-text",
+      "--accent-tint",
+      "--border-default",
+      "--border-strong",
+      "--border-subtle",
+      "--container-max",
+      "--container-text",
+      "--danger",
+      "--divider-rule",
+      "--dur-base",
+      "--dur-fast",
+      "--dur-slow",
+      "--ease-in",
+      "--ease-out",
+      "--ease-standard",
+      "--focus-ring",
+      "--font-body",
+      "--font-display",
+      "--font-mono",
+      "--font-serif",
+      "--fw-black",
+      "--fw-bold",
+      "--fw-light",
+      "--fw-medium",
+      "--fw-regular",
+      "--fw-semibold",
+      "--gold-100",
+      "--gold-500",
+      "--gold-600",
+      "--gutter",
+      "--lh-body",
+      "--lh-heading",
+      "--lh-relaxed",
+      "--lh-snug",
+      "--lh-tight",
+      "--neutral-0",
+      "--neutral-100",
+      "--neutral-200",
+      "--neutral-300",
+      "--neutral-400",
+      "--neutral-50",
+      "--neutral-500",
+      "--neutral-600",
+      "--neutral-700",
+      "--neutral-800",
+      "--neutral-900",
+      "--ngn-black",
+      "--ngn-gold",
+      "--ngn-ink",
+      "--ngn-red",
+      "--ngn-white",
+      "--pattern-tile-black",
+      "--pattern-tile-red",
+      "--pattern-tile-size",
+      "--pattern-tile-white",
+      "--prestige",
+      "--prestige-tint",
+      "--radius-circle",
+      "--radius-lg",
+      "--radius-md",
+      "--radius-none",
+      "--radius-pill",
+      "--radius-sm",
+      "--radius-xs",
+      "--red-100",
+      "--red-200",
+      "--red-500",
+      "--red-600",
+      "--red-700",
+      "--shadow-focus",
+      "--shadow-lg",
+      "--shadow-md",
+      "--shadow-none",
+      "--shadow-sm",
+      "--space-0",
+      "--space-1",
+      "--space-10",
+      "--space-2",
+      "--space-3",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--space-7",
+      "--space-8",
+      "--space-9",
+      "--success",
+      "--surface-card",
+      "--surface-cream",
+      "--surface-inverse",
+      "--surface-inverse-2",
+      "--surface-page",
+      "--surface-paper",
+      "--surface-sunken",
+      "--text-2xl",
+      "--text-3xl",
+      "--text-4xl",
+      "--text-5xl",
+      "--text-base",
+      "--text-inverse",
+      "--text-lg",
+      "--text-md",
+      "--text-muted",
+      "--text-on-red",
+      "--text-primary",
+      "--text-secondary",
+      "--text-sm",
+      "--text-xl",
+      "--text-xs",
+      "--tracking-kicker",
+      "--tracking-normal",
+      "--tracking-snug",
+      "--tracking-tight",
+      "--tracking-wide",
+      "--warning"
+    ],
+    "tokenKinds": {
+      "--ngn-black": "color",
+      "--ngn-white": "color",
+      "--ngn-red": "color",
+      "--ngn-gold": "color",
+      "--red-100": "color",
+      "--red-200": "color",
+      "--red-500": "color",
+      "--red-600": "color",
+      "--red-700": "color",
+      "--gold-100": "color",
+      "--gold-500": "color",
+      "--gold-600": "color",
+      "--neutral-0": "color",
+      "--neutral-50": "color",
+      "--neutral-100": "color",
+      "--neutral-200": "color",
+      "--neutral-300": "color",
+      "--neutral-400": "color",
+      "--neutral-500": "color",
+      "--neutral-600": "color",
+      "--neutral-700": "color",
+      "--neutral-800": "color",
+      "--neutral-900": "color",
+      "--ngn-ink": "color",
+      "--surface-page": "color",
+      "--surface-paper": "color",
+      "--surface-card": "color",
+      "--surface-sunken": "color",
+      "--surface-inverse": "color",
+      "--surface-inverse-2": "color",
+      "--surface-cream": "color",
+      "--text-primary": "font",
+      "--text-secondary": "font",
+      "--text-muted": "font",
+      "--text-inverse": "font",
+      "--text-on-red": "font",
+      "--accent": "color",
+      "--accent-hover": "color",
+      "--accent-press": "color",
+      "--accent-tint": "color",
+      "--accent-text": "font",
+      "--prestige": "color",
+      "--prestige-tint": "color",
+      "--border-subtle": "color",
+      "--border-default": "color",
+      "--border-strong": "color",
+      "--divider-rule": "color",
+      "--focus-ring": "color",
+      "--success": "color",
+      "--warning": "color",
+      "--danger": "color",
+      "--font-display": "font",
+      "--font-serif": "font",
+      "--font-body": "font",
+      "--font-mono": "font",
+      "--fw-light": "other",
+      "--fw-regular": "other",
+      "--fw-medium": "other",
+      "--fw-semibold": "other",
+      "--fw-bold": "other",
+      "--fw-black": "other",
+      "--text-xs": "font",
+      "--text-sm": "font",
+      "--text-base": "font",
+      "--text-md": "font",
+      "--text-lg": "font",
+      "--text-xl": "font",
+      "--text-2xl": "font",
+      "--text-3xl": "font",
+      "--text-4xl": "font",
+      "--text-5xl": "font",
+      "--lh-tight": "other",
+      "--lh-snug": "other",
+      "--lh-heading": "other",
+      "--lh-body": "other",
+      "--lh-relaxed": "other",
+      "--tracking-tight": "other",
+      "--tracking-snug": "other",
+      "--tracking-normal": "other",
+      "--tracking-wide": "other",
+      "--tracking-kicker": "other",
+      "--space-0": "spacing",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-5": "spacing",
+      "--space-6": "spacing",
+      "--space-7": "spacing",
+      "--space-8": "spacing",
+      "--space-9": "spacing",
+      "--space-10": "spacing",
+      "--container-max": "spacing",
+      "--container-text": "spacing",
+      "--gutter": "color",
+      "--radius-none": "radius",
+      "--radius-xs": "radius",
+      "--radius-sm": "radius",
+      "--radius-md": "radius",
+      "--radius-lg": "radius",
+      "--radius-pill": "radius",
+      "--radius-circle": "radius",
+      "--shadow-none": "shadow",
+      "--shadow-sm": "shadow",
+      "--shadow-md": "shadow",
+      "--shadow-lg": "shadow",
+      "--shadow-focus": "shadow",
+      "--ease-standard": "other",
+      "--ease-out": "other",
+      "--ease-in": "other",
+      "--dur-fast": "other",
+      "--dur-base": "other",
+      "--dur-slow": "other",
+      "--pattern-tile-black": "other",
+      "--pattern-tile-red": "other",
+      "--pattern-tile-white": "other",
+      "--pattern-tile-size": "spacing"
+    },
+    "fontFamilies": [
+      "Hanken Grotesk",
+      "Lato",
+      "Newsreader"
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+<!-- @dsCard group="Components" viewport="700x520" name="Editorial — cards, byline, pullquote, newsletter" subtitle="Story building blocks" -->
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>body{margin:0;font-family:var(--font-body);background:#fff;padding:26px}
+.lbl{font-family:var(--font-mono);font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.1em;margin:0 0 12px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-bottom:30px;align-items:start}
+hr{border:none;border-top:1px solid var(--border-subtle);margin:26px 0}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script></head>
+<body><div id="root"></div>
+<script type="text/babel">
+const { ArticleCard, Byline, Pullquote, NewsletterForm } = window.NortheasternGlobalNewsDesignSystem_712acf;
+function Demo(){
+  return (<div>
+    <p class="lbl">ArticleCard — stacked & horizontal</p>
+    <div class="row">
+      <ArticleCard category="Research"
+        title="Northeastern scientists map uncharted ocean floor"
+        dek="A monthslong expedition returns with troves of new data on deep-sea ecosystems."
+        author="Ian Thomsen" date="March 12, 2026" readTime="6 min read" />
+      <ArticleCard layout="horizontal" category="Campus" categoryTone="solid"
+        title="A new home for experiential learning opens on the Boston campus"
+        author="Cynthia McCormick Hibbert" date="March 10, 2026" readTime="4 min read" />
+    </div>
+    <hr/>
+    <p class="lbl">Byline</p>
+    <Byline author="Tanner Stening" date="March 9, 2026" readTime="8 min read" />
+    <hr/>
+    <p class="lbl">Pullquote</p>
+    <Pullquote cite="Joseph E. Aoun" role="President, Northeastern University">
+      The world doesn't wait. Neither do we.
+    </Pullquote>
+    <hr/>
+    <p class="lbl">NewsletterForm</p>
+    <NewsletterForm />
+  </div>);
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>
